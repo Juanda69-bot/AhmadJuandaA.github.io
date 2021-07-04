@@ -20,7 +20,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('mahasiswa', 'MahasiswaController@index')->name('mahasiswa');
-Route::get('Tambah', 'TambahController@tambahdata');
+Route::get('Tambah', 'MahasiswaController@tambahdata') -> name('tambah.mahasiswa');
 Route::POST('simpan-mahasiswa', 'MahasiswaController@save')->name('simpan.mahasiswa');
 
 Route::get('edit-mahasiswa/{id}', 'MahasiswaController@edit')->name('edit.mahasiswa');

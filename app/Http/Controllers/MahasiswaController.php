@@ -14,6 +14,13 @@ class MahasiswaController extends Controller
        return view('mahasiswa.index', compact('mahasiswa'));
     }
 
+    public function tambahdata()
+    {
+        
+        return view('mahasiswa.tambah');
+        
+    }
+
     public function save(Request $request)
     {
         mahasiswa::create($request->all());
