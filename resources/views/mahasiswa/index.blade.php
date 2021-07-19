@@ -22,9 +22,12 @@
                                 <th>ALAMAT</th>
                                 <th>AKSI</th>
                             </tr>
+                            @php
+                                $no = 1;
+                            @endphp 
                                 @foreach ($mahasiswa as $mhs)
                                 <tr>
-                                    <td>{{ $mhs->id }}</td>
+                                    <td>{{ $no++ }}</td>
                                     <td>{{ $mhs->npm }}</td>
                                     <td>{{ $mhs->nama_mahasiswa }}</td>
                                     <td>{{ $mhs->tempat_lahir.', '.$mhs->tgl_lahir }}</td>
